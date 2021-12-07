@@ -6,6 +6,32 @@
     <title>Latte Bar Menu</title>
   </head>
   <body>
-    <h1>menu</h1>
+    <div class="row">
+  <!--Middle Part Start-->
+  <div id="content" class="col-sm-12">
+    <h1 class="title">Orders</h1>
+    <% for(i=0; i<orders.length; i++){ %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+          <ul class="list-group">
+
+            <% for (p in orders[i].cart) { %>
+              <li class="list-group-item">
+                <span class=''><%= orders[i].cart[p].item.name  %>   quantity:<%= orders[i].cart[p].qty  %>   Unit Price:<%= orders[i].cart[p].item.price  %>
+                    Total Price :<%= orders[i].cart[p].price  %></span>
+            </li>
+          <% } %>
+
+            </ul>
+      </div>
+      <div class="panel-footer">
+        <a><span>Status : <span><%= orders[i].status  %> </div>
+    </div>
+  <% } %>
+
+  </div>
+  <!--Middle Part End -->
+</div>
   </body>
 </html>
