@@ -6,6 +6,13 @@
     <title>View Orders</title>
   </head>
   <body>
-    <div id="title">List of Orders</div>
+    <div id="title">Orders</div>
+    <div id="list">
+
+      <% for (var i = 0; i < orders.length; i++) { %>
+        <div class="order"><%- orders[i].name %></div>
+      <% } %>
+
+    </div>
   </body>
 </html>
