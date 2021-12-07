@@ -28,7 +28,13 @@ app.get('/login', (req, res) => {
 
 //Made orders endpoint
 app.get('/orders', (req, res) => {
-  res.render('orders')
+  res.render('orders', {
+    orders: [{
+      name: 'urmum'
+    }, {
+      name: 'balogna'
+    }]
+  })
 });
 
 //Start HTTP Listen Server
