@@ -4,7 +4,7 @@ const express = require('express');
 const app = express()
 //Made view engine ejs
 app.set("view engine", "ejs")
-
+app.use(express.static(__dirname + '/cssFiles'))
 //Made root endpoint that redirects to the login page
 app.get('/', (req, res) => {
   res.redirect('login')
